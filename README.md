@@ -50,8 +50,8 @@ npm start          # or: python app.py
 ## 🔗 Related
 
 - **Live portfolio:** [https://minga-portfolio.onrender.com](https://minga-portfolio.onrender.com)
-- **LinkedIn:** [linkedin.com/in/mingangolo](https://linkedin.com/in/mingangolo) *(update link)*
-- **Kaggle:** *(add your Kaggle profile URL)*
+- **LinkedIn:** [linkedin.com/in/mingangolo](https://linkedin.com/in/mingangolo)
+- **Kaggle:** [https://www.kaggle.com/minga](https://www.kaggle.com/mingangolo)
 
 ---
 
