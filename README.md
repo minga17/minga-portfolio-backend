@@ -2,7 +2,7 @@
 
 > 🌐 **Live site:** [https://minga-portfolio.onrender.com](https://minga-portfolio.onrender.com)
 
-Backend service powering [mingangolo's](https://github.com/mingangolo) personal portfolio.
+Backend service powering [mingangolo's](https://github.com/minga17) personal portfolio.
 
 ---
 
