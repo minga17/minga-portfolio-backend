@@ -1,6 +1,6 @@
 # minga-portfolio-backend
 
-> 🌐 **Live site:** [portfolio.mingangolo.com](https://portfolio.mingangolo.com)
+> 🌐 **Live site:** [minga-portfolio.onrender.com](https://minga-portfolio.onrender.com)
 
 Backend service powering Minga Ngolo's personal data analyst portfolio.
 
@@ -76,7 +76,7 @@ Visit `http://localhost:5000`
 
 ## 🔗 Related
 
-- **Live portfolio:** [portfolio.mingangolo.com](https://portfolio.mingangolo.com)
+- **Live portfolio:**  [minga-portfolio.onrender.com](https://minga-portfolio.onrender.com)
 - **LinkedIn:** [linkedin.com/in/minga17](https://www.linkedin.com/in/minga17)
 - **GitHub:** [github.com/Minga17](https://github.com/Minga17)
 - **Kaggle:** [kaggle.com/mingangolo](https://www.kaggle.com/mingangolo)
