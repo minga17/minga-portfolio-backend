@@ -17,12 +17,20 @@ init_db()
 def home():
     return send_from_directory('.', 'index.html')
 
+@app.route('/index.html')
+def home_html():
+    return send_from_directory('.', 'index.html')
+
 @app.route('/project')
 def project():
     return send_from_directory('.', 'project.html')
 
 @app.route('/project.html')
 def project_html():
+    return send_from_directory('.', 'project.html')
+
+@app.route('/projects.html')
+def projects_html():
     return send_from_directory('.', 'project.html')
 
 @app.route('/static/js/api.js')
