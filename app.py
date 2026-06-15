@@ -142,7 +142,7 @@ def get_stats():
         'done_count':       done_count,
         'active_count':     active_count,
         'planned_count':    planned_count,
-        'rows_analysed':    21107,
+        'rows_analysed':    361302,
         'github_repos':     2,
         'kaggle_notebooks': 9,
     })

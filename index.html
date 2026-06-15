@@ -164,19 +164,56 @@
       .page-hero, .section-wrap { padding-left: 3rem; padding-right: 3rem; }
       footer { padding: 3rem; }
       .page-hero::after, .watermark { display: none; }
+      .stats-strip { flex-wrap: wrap; gap: 0; }
+      .stat-block { flex: 1 1 33%; border-right: none; border-bottom: 1px solid rgba(212,130,10,0.1); padding: 1.5rem 1rem; }
+      .contact-section { padding: 4rem 3rem; }
     }
     @media (max-width: 640px) {
+      /* ── Nav ── */
       nav { padding: 1rem 1.5rem; }
-      .nav-links { gap: 1.2rem; }
+      .nav-links { gap: 0.8rem; }
+      .nav-links a { font-size: 0.65rem; }
+      .nav-social { display: none; }
+
+      /* ── Hero ── */
       .page-hero, .section-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
-      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.5rem; }
+      .page-hero { padding-top: 9rem; padding-bottom: 3rem; }
+      .hero-eyebrow { font-size: 0.6rem; flex-wrap: wrap; }
+      .hero-tagline { font-size: 1rem; }
+      .cta-group { flex-direction: column; gap: 0.8rem; }
+      .cta-btn { width: 100%; justify-content: center; }
+
+      /* ── Stats strip ── */
+      .stats-strip { flex-wrap: wrap; }
+      .stat-block { flex: 1 1 50%; padding: 1.2rem 0.8rem; border-right: none; border-bottom: 1px solid rgba(212,130,10,0.1); }
+      .stat-block-num { font-size: 1.8rem; }
+
+      /* ── Cards and layout ── */
       .card-grid { grid-template-columns: 1fr; }
       .two-col { grid-template-columns: 1fr; gap: 2rem; }
+
+      /* ── Tools strip ── */
+      .tools-strip { padding: 1.2rem; gap: 0.4rem; }
+      .tool-pill { font-size: 0.6rem; padding: 0.28rem 0.7rem; }
+
+      /* ── Reading cards ── */
+      .reading-card { flex-direction: column; gap: 0.8rem; padding: 1.4rem; }
+      .reading-icon { font-size: 1.4rem; }
+
+      /* ── Timeline ── */
       .timeline { grid-template-columns: 1fr; gap: 1.5rem; }
       .timeline::before { display: none; }
       .timeline-item { text-align: left; display: flex; gap: 1.2rem; align-items: flex-start; }
       .timeline-dot { margin: 5px 0 0; flex-shrink: 0; }
       .timeline-desc { margin: 0; max-width: none; }
+
+      /* ── Contact section ── */
+      .contact-section { padding: 3rem 1.5rem; }
+      .contact-section p { font-size: 1rem; }
+
+      /* ── Footer ── */
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2.5rem 1.5rem; }
+      .footer-social { justify-content: center; flex-wrap: wrap; gap: 1rem; }
     }
   </style>
 </head>
@@ -192,6 +229,7 @@
     <div class="nav-social">
       <a href="https://github.com/Minga17" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.linkedin.com/in/minga17" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://x.com/mingangolo17s?s=11" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
     </div>
   </nav>
 
@@ -199,9 +237,9 @@
   <div class="page-hero" id="about">
     <span class="badge badge-pulse fade-in">
       <span style="width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block;flex-shrink:0;"></span>
-      Currently Learning · Portfolio &nbsp;·&nbsp;SQL Queries &amp; Joins
+      Currently Learning · Python &nbsp;·&nbsp; SQL Queries &amp; Joins
     </span>
-    <div class="hero-eyebrow fade-in">Aspiring Data Analyst &nbsp;·&nbsp; Portfolio &nbsp;·&nbsp; Student at Metropolitan Community College</div>
+    <div class="hero-eyebrow fade-in">Aspiring Data Analyst &nbsp;·&nbsp; Portfolio &nbsp;·&nbsp; Open to Opportunities</div>
     <h1 class="fade-in">Minga<br><em>Ngolo.</em></h1>
     <p class="hero-tagline fade-in">Turning raw data into clear answers <br>one project at a time.</p>
     <div class="hero-three-words fade-in">
@@ -218,7 +256,7 @@
   <!-- ── BY THE NUMBERS ── -->
   <div class="stats-strip fade-in">
     <div class="stat-block">
-      <div class="stat-block-num" id="stat-rows">21,107</div>
+      <div class="stat-block-num" id="stat-rows">361,302</div>
       <div class="stat-block-label">Rows Analysed</div>
     </div>
     <div class="stat-block">
@@ -230,7 +268,7 @@
       <div class="stat-block-label">Public GitHub Repos</div>
     </div>
     <div class="stat-block">
-      <div class="stat-block-num" id="stat-kaggle">9</div>
+      <div class="stat-block-num" id="stat-kaggle">7</div>
       <div class="stat-block-label">Kaggle Notebooks</div>
     </div>
     <div class="stat-block">
@@ -248,10 +286,10 @@
     <div class="watermark">WHO</div>
     <div class="section-eyebrow">01 Introduction</div>
     <h2>Who I <em>Am</em></h2>
-    <p class="large-text">Some people find their path early. I found mine by moving across continents and learning to adapt along the way. Born in the DRC, raised in Zimbabwe, now building toward something bigger in the USA, my story isn't just about geography. It's about becoming.</p>
-    <p class="body-text">I'm a student with a quiet kind of drive. Not the loudest person in the room, but consistently the most focused. I move through life blending two worlds that most people think don't go together: the creative energy of music and soccer, and the logical precision of technology. That tension? It's actually my biggest strength.</p>
-    <p class="body-text">Right now, I'm focused on data analysis, finding patterns in messy datasets, understanding what the numbers are actually saying, and turning raw information into something that makes decisions easier. So far I've analysed over 21,000 rows of real-world data across two completed projects, with more in progress.</p>
-    <p class="body-text">I'm here to build skills, build a career in data, and build something worth being proud of.</p>
+    <p class="large-text">Some people find their path early. I found mine by moving across continents and learning to adapt along the way. Born in the DRC, raised in Zimbabwe, now building toward something bigger in the USA and my story isn't just about geography. It's about becoming.</p>
+    <p class="body-text">I'm someone with a quiet kind of drive. Not the loudest person in the room, but consistently the most focused. I move through life blending two worlds that most people think don't go together: the creative energy of music and soccer, and the logical precision of technology. That tension? It's actually my biggest strength.</p>
+    <p class="body-text">Right now, I'm focused on data analysis finding patterns in messy datasets, understanding what the numbers are actually saying, and turning raw information into something that makes decisions easier. So far I've analysed over 361,302 rows of real-world data across 5 completed projects, with more in progress. I want to be proof that crossing borders and staying disciplined can take you somewhere worth going.</p>
+    <p class="body-text">I'm here to build skills, a career in data, and something worth being proud of.</p>
   </div>
 
   <!-- ── 02 WHERE I'M FROM ── -->
@@ -260,7 +298,7 @@
     <div class="section-eyebrow">02 Personal Background</div>
     <h2>Where I'm <em>From</em></h2>
     <p class="large-text">Born in the Democratic Republic of Congo. Raised in Zimbabwe. Currently writing the next chapter in the United States.</p>
-    <p class="body-text">That's not just a travel itinerary, that's a curriculum. Growing up in Zimbabwe shaped something in me that no classroom could: the ability to stay grounded when things get uncertain, to find focus when resources are limited, and to keep moving forward even when the path isn't clear. It also taught me to look at what the numbers actually say, not what I wish they said. That instinct is what makes a good analyst.</p>
+    <p class="body-text">That's not just a travel itinerary that's a curriculum. Growing up in Zimbabwe shaped something in me that no classroom could: the ability to stay grounded when things get uncertain, to find focus when resources are limited, and to keep moving forward even when the path isn't clear. It also taught me to look at what the numbers actually say not to what I wish they said. That instinct is what makes a good analyst.</p>
     <p class="body-text">Every environment I've lived in has left a mark. The DRC gave me origin. Zimbabwe gave me roots and resilience. America is giving me a canvas. I carry all three wherever I go.</p>
     <blockquote>"You don't need a perfect start to build something meaningful. You just need a reason to keep going."</blockquote>
   </div>
@@ -269,8 +307,8 @@
   <div class="section-wrap fade-in">
     <div class="section-eyebrow">03 Interests and Passions</div>
     <h2>What <em>Drives</em> Me</h2>
-    <p class="body-text">I live at the intersection of movement and stillness. On the field, I'm competitive soccer teaches you things no lecture ever can: reading the situation in real time, communicating without words, pushing through when your legs don't cooperate. That discipline bleeds into everything else I do.</p>
-    <p class="body-text">Off the field, I pick up my guitar. Music is where I process the world, where logic meets emotion, where I let myself be unstructured. There's something powerful about creating something out of nothing, and that same instinct pulls me toward data and problem-solving.</p>
+    <p class="body-text">I live at the intersection of movement and stillness. On the field, I'm competitive and soccer teaches you things no lecture ever can: reading the situation in real time, communicating without words, pushing through when your legs don't cooperate. That discipline bleeds into everything else I do.</p>
+    <p class="body-text">Off the field, I pick up my guitar. Music is where I process the world where logic meets emotion, where I let myself be unstructured. There's something powerful about creating something out of nothing, and that same instinct pulls me toward data and problem-solving.</p>
     <p class="body-text">Data is where those two instincts converge. Every dataset has a pattern waiting to be found, and finding it feels like both a logical puzzle and a creative act.</p>
     <div class="tag-group">
       <span class="tag">Soccer</span>
@@ -292,12 +330,12 @@
       <div class="card">
         <div class="card-icon">🎯</div>
         <h3>Right Now (2026)</h3>
-        <p>Complete Projects 07–10, sharpen SQL skills, and submit my first internship applications for junior data analyst roles. The foundation is built, now it's about converting it into opportunity.</p>
+        <p>Complete Projects 07–10, sharpen SQL skills, and submit my first internship applications for junior data analyst roles. The foundation is built now it's about converting it into opportunity.</p>
       </div>
       <div class="card">
         <div class="card-icon">📈</div>
         <h3>On the Horizon</h3>
-        <p>Move from student projects to real-world impact. Contribute to a team that uses data to make actual decisions. Land a full-time role where I can grow from analyst to senior analyst.</p>
+        <p>Move from personal projects to professional impact. Contribute to a team that uses data to make actual decisions. Land a full-time role where I can grow from analyst to senior analyst.</p>
       </div>
       <div class="card">
         <div class="card-icon">🚀</div>
@@ -333,12 +371,12 @@
       <div class="card">
         <div class="card-icon">🧹</div>
         <h3>Data Cleaning</h3>
-        <p>Real data is never clean. Nulls, duplicates, wrong formats, mislabeled columns, this is where most of the actual work lives, and I'm not afraid of it.</p>
+        <p>Real data is never clean. Nulls, duplicates, wrong formats, mislabeled columns this is where most of the actual work lives, and I'm not afraid of it.</p>
       </div>
       <div class="card">
         <div class="card-icon">📁</div>
         <h3>Excel / Spreadsheets</h3>
-        <p>PivotTables, VLOOKUP, conditional logic. Still one of the most-used data tools in any workplace and I know my way around it.</p>
+        <p>PivotTables, VLOOKUP, conditional logic. Still one of the most-used data tools in any workplace, and I know my way around it.</p>
       </div>
       <div class="card">
         <div class="card-icon">🔢</div>
@@ -352,12 +390,12 @@
       <div class="card">
         <div class="card-icon">🧠</div>
         <h3>Analytical Thinking</h3>
-        <p>I break problems down before jumping to answers. From reading a soccer match in real time to debugging a dataset, pattern recognition is how I naturally operate.</p>
+        <p>I break problems down before jumping to answers. From reading a soccer match in real time to debugging a dataset pattern recognition is how I naturally operate.</p>
       </div>
       <div class="card">
         <div class="card-icon">🤝</div>
         <h3>Communication</h3>
-        <p>Data only matters if you can explain it. I've learned to translate complex ideas into clear language, from three languages, three countries, and a lot of practice.</p>
+        <p>Data only matters if you can explain it. I've learned to translate complex ideas into clear language from three languages, three countries, and a lot of practice.</p>
       </div>
       <div class="card">
         <div class="card-icon">🎯</div>
@@ -367,7 +405,7 @@
       <div class="card">
         <div class="card-icon">🌍</div>
         <h3>Adaptability</h3>
-        <p>Three countries. Multiple environments. Different challenges. I've learned to figure it out, wherever "it" is. New tools, new datasets, new problems included.</p>
+        <p>Three countries. Multiple environments. Different challenges. I've learned to figure it out wherever "it" is. New tools, new datasets, new problems included.</p>
       </div>
     </div>
 
@@ -391,9 +429,7 @@
     <div class="watermark">VALUES</div>
     <div class="section-eyebrow">06 Values and Mindset</div>
     <h2>What I <em>Stand On</em></h2>
-    <p class="large-text">Values aren't what you say they're what you do when no one's watching, when you're tired, when it would be easier to stop.</p>
-    <p class="body-text">My core value is simple but hard: <strong>discipline over motivation.</strong> Motivation comes and goes. Discipline is a choice you make every morning. I've learned to trust the process, not the feeling.</p>
-    <p class="body-text">Alongside that, I believe deeply in honesty, with myself and others. I don't pretend to have it all figured out, but I'm always genuinely trying to grow. Loyalty matters to me. And choosing the right people around you is itself a form of discipline.</p>
+    <p class="body-text">My core value is simple but hard: <strong>discipline over motivation.</strong> Motivation comes and goes. Discipline is the choice you make every morning especially on the days nothing feels worth it. That's the one that builds everything else.</p>
     <div class="tag-group">
       <span class="tag">Discipline over motivation</span>
       <span class="tag">Growth mindset</span>
@@ -409,11 +445,11 @@
     <h2>What I've <em>Built</em> So Far</h2>
     <p class="body-text">Not trophies. Real work. Real numbers. Real proof.</p>
     <ul class="row-list">
-      <li><span class="row-num">01</span>Maintained academic commitment through transitions across three countries and school systems, that's not nothing, and most people who've done it know exactly why.</li>
-      <li><span class="row-num">02</span>Analysed over 21,107 rows of real-world data across two completed projects, a retail sales dataset ($2.3M revenue, 9,994 rows) and 11,113 Premier League matches. Real datasets, real findings, publicly available on GitHub and Kaggle.</li>
-      <li><span class="row-num">03</span>Published 2 public GitHub repos and 2 Kaggle notebooks all open, all real, all built from scratch with no copied code.</li>
-      <li><span class="row-num">04</span>Built and deployed 3 web projects from scratch a soccer education site, this portfolio, and a React productivity app all live on the internet.</li>
-      <li><span class="row-num">05</span>Showed up consistently to training, to class, to growth even on the days it didn't feel worth it. That's the one that compounds the slowest and matters the most.</li>
+      <li><span class="row-num">01</span>Maintained commitment through transitions across three countries and school systems, and kept building the whole time.</li>
+      <li><span class="row-num">02</span>Analysed <strong>361,302 rows</strong> of real-world data across 5 completed projects retail sales ($2.3M revenue), 11,113 Premier League matches, 306,429 COVID-19 records, 7,787 Netflix titles, and 25,979 European soccer matches. All findings published publicly on GitHub and Kaggle.</li>
+      <li><span class="row-num">03</span>Built a full-stack portfolio Flask backend, SQLite database, REST API, and custom domain. Not a template. Built from scratch.</li>
+      <li><span class="row-num">04</span>Published 7 public Kaggle notebooks and deployed 3 web projects a soccer education site, this portfolio, and a React productivity app all live on the internet.</li>
+      <li><span class="row-num">05</span>Showed up consistently to training, to projects, to growth even on the days it didn't feel worth it. That's the one that compounds the slowest and matters the most.</li>
     </ul>
   </div>
 
@@ -427,11 +463,11 @@
       <div class="two-col-item">
         <h3>Currently Building</h3>
         <ul>
-          <li>Completing Projects 07–10 (COVID, Netflix, Job Market, Happiness)</li>
-          <li>SQL — joins, aggregations, subqueries, window functions</li>
-          <li>Building the SQL + Python pipeline project end to end</li>
-          <li>Submitting first internship applications for analyst roles</li>
-          <li>Growing my Kaggle notebook library with each project</li>
+          <li>Projects 09 and 10 Job Market and World Happiness Report</li>
+          <li>SQL + Python Pipeline end to end database workflow</li>
+          <li>Deepening SQL window functions, CTEs, subqueries</li>
+          <li>Submitting internship applications for junior analyst roles</li>
+          <li>Growing Kaggle profile with each completed project</li>
         </ul>
       </div>
       <div class="two-col-item">
@@ -451,8 +487,8 @@
       <div class="reading-icon">📖</div>
       <div>
         <div class="reading-label">Active Resource</div>
-        <div class="reading-title">Python for Data Analysis, Wes McKinney</div>
-        <div class="reading-desc">The book written by the creator of Pandas. Working through it alongside my projects, applying each concept directly to real datasets rather than just reading about it.</div>
+        <div class="reading-title">Python for Data Analysis Wes McKinney</div>
+        <div class="reading-desc">The book written by the creator of Pandas. Working through it alongside my projects applying each concept directly to real datasets rather than just reading about it.</div>
       </div>
     </div>
     <div class="reading-card">
@@ -469,7 +505,7 @@
   <div class="section-wrap fade-in">
     <div class="section-eyebrow">09 Creative Side</div>
     <h2>The Other <em>Side</em> of Me</h2>
-    <p class="body-text">Music and soccer aren't separate from my data work they're where my analytical instincts were trained. Soccer taught me to read a situation in real time and act on incomplete information. Music taught me to find structure in something that feels like noise. Both of those skills show up every time I open a dataset.</p>
+    <p class="body-text">Music and soccer aren't separate from my data work, they're where my analytical instincts were trained. Soccer taught me to read a situation in real time and act on incomplete information. Music taught me to find structure in something that feels like noise. Both of those skills show up every time I open a dataset.</p>
   </div>
 
   <!-- ── 10 WHEN IT GOT HARD ── -->
@@ -477,7 +513,7 @@
     <div class="watermark">GRIT</div>
     <div class="section-eyebrow">10 Challenges and Determination</div>
     <h2>When It Got <em>Hard</em></h2>
-    <p class="body-text">Three countries, three school systems, multiple low-motivation seasons where the goal felt too far away to matter. What I learned from all of it, not from a book but from living it is that motivation is a liar. Discipline is the only thing that shows up when motivation doesn't. Every transition I've been through has had one answer: adapt, focus on what you can control, and keep going.</p>
+    <p class="body-text">Three countries, three school systems, multiple low-motivation seasons where the goal felt too far away to matter. What I learned from all of it not from a book but from living it, is that motivation is a liar. Discipline is the only thing that shows up when motivation doesn't. Every transition I've been through has had one answer: adapt, focus on what you can control, and keep going.</p>
     <div class="highlight-box">
       <p>🔑 <strong>The lesson I keep coming back to:</strong> You don't have to feel ready. You just have to show up anyway.</p>
     </div>
@@ -488,8 +524,8 @@
     <div class="watermark">FUTURE</div>
     <div class="section-eyebrow">11 Future Vision</div>
     <h2>Where I'm <em>Headed</em></h2>
-    <p class="body-text">I'm targeting junior data analyst roles at tech companies, startups, or organisations working on social impact places where data actually drives decisions and clear communication matters as much as technical skill. That's the kind of environment where what I bring is most valuable.</p>
-    <p class="body-text">Every project I build right now is a step toward that. Every dataset I explore, every query I write, every chart I make it's all going somewhere. The work is quiet and consistent, and the results compound.</p>
+    <p class="body-text">I'm targeting junior data analyst roles at tech companies, startups, or organisations working on social impact, places where data actually drives decisions and clear communication matters as much as technical skill. That's the kind of environment where what I bring is most valuable.</p>
+    <p class="body-text">Every project I build right now is a step toward that. Every dataset I explore, every query I write, every chart I make, it's all going somewhere. The work is quiet and consistent, and the results compound.</p>
     <p class="body-text">But beyond the career, I see someone who's given back. Someone who made it easier for the next person coming from where I came from. I want to be proof that crossing borders and staying disciplined can take you somewhere worth going.</p>
   </div>
 
@@ -502,59 +538,67 @@
         <div class="timeline-dot past"></div>
         <p class="timeline-era">Past</p>
         <p class="timeline-title">Roots and Resilience</p>
-        <p class="timeline-desc">DRC to Zimbabwe, building a foundation of adaptability, discipline, and identity across cultures.</p>
+        <p class="timeline-desc">DRC to Zimbabwe: building a foundation of adaptability, discipline, and identity across cultures.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot now"></div>
         <p class="timeline-era">Now</p>
         <p class="timeline-title">Data and Code</p>
-        <p class="timeline-desc">Student in the USA learning Python, SQL, and data analysis. Building real projects. Turning skill into proof.</p>
+        <p class="timeline-desc">Building in the USA: 5 data projects completed, Python + SQL + Power BI in the stack. Turning skill into proof every week.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot future"></div>
         <p class="timeline-era">Future</p>
         <p class="timeline-title">Analyst and Impact</p>
-        <p class="timeline-desc">Data analyst, data scientist, community figure turning the journey into a story that opens doors for others.</p>
+        <p class="timeline-desc">Data analyst, data scientist, community figure, turning the journey into a story that opens doors for others.</p>
       </div>
     </div>
   </div>
 
   <!-- ── FUN FACTS ── -->
   <div class="section-wrap fade-in">
-    <div class="section-eyebrow">12 Fun Facts</div>
+    <div class="section-eyebrow">12 — Quick Facts</div>
     <h2>A Few Things You <em>Should Know</em></h2>
     <ul class="row-list">
-      <li><span class="row-num">✦</span>I've lived in three countries on two continents which means I hold a set of perspectives most people only get from a documentary.</li>
-      <li><span class="row-num">✦</span>I can switch from debugging a Python script to picking up a guitar, and those two activities actually make each other better.</li>
-      <li><span class="row-num">✦</span>I'm the person who will still be working toward a goal when everyone else has moved on quietly, without announcement.</li>
-      <li><span class="row-num">✦</span>Soccer taught me that momentum is real once you start moving forward, stopping feels unnatural. Same goes for learning data.</li>
-      <li><span class="row-num">✦</span>I believe the most underrated skill in the world is just showing up. Consistently. Regardless of how you feel that day.</li>
+      <li><span class="row-num">✦</span>I've lived in three countries on two continents — which means I hold a set of perspectives most people only get from a documentary.</li>
+      <li><span class="row-num">✦</span>I can go from debugging Python to picking up a guitar in the same afternoon, and those two things actually make each other better.</li>
     </ul>
   </div>
 
-  <!-- ── STANDOUT ── -->
-  <div class="section-wrap fade-in">
-    <div class="watermark">UNIQUE</div>
-    <div class="section-eyebrow">14 What Makes Me Unique</div>
-    <h2>The <em>Standout</em> Factor</h2>
-    <span class="badge">⚡ Dual-mode thinker</span>
-    <p class="body-text">Most people are either creative or analytical. I've built myself at both ends of that spectrum, and I genuinely believe that's where the most interesting data work happens.</p>
-    <p class="body-text">I can go from exploring a dataset to composing music in the same afternoon. I can read a soccer match and a bar chart with the same instinct. I can communicate findings to someone who doesn't know what a DataFrame is without losing the precision of what the data actually says.</p>
-    <p class="body-text">That's the combination. That's what I bring.</p>
-    <div class="highlight-box">
-      <p>🎯 <strong>My Energy / Vibe:</strong> Think of that one teammate who never panics in a tough match, always finds the right pass, and still smiles at the end. Calm, capable, and quietly competitive. That's me with a dataset too.</p>
-      <p>📊 <strong>If You Know Me, You Know...</strong> I'll take the longer path if it's the right one. I don't cut corners not because I can't, but because I actually care about the result. And the result, in data, is always a story worth telling correctly.</p>
+  <!-- ── FEATURED PROJECTS ── -->
+  <div class="section-wrap fade-in" id="featured">
+    <div class="section-eyebrow">Featured Work</div>
+    <h2>Projects That <em>Prove It</em></h2>
+    <p class="body-text">Not descriptions of what I can do. Actual work I built and published.</p>
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card" style="border-left:none;padding:2rem;">
+        <div class="card-icon">📊</div>
+        <h3>Retail Sales Analysis</h3>
+        <p>Cleaned 9,994 rows. Found $22k in hidden losses across 3 sub-categories. Built 4 Matplotlib charts. Published on GitHub + Kaggle.</p>
+        <div class="tag-group" style="margin-top:1rem;">
+          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://github.com/Minga17/retail-sales-analysis" target="_blank" style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.kaggle.com/code/mingangolo/retailsale" target="_blank" style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;"><i class="fa-solid fa-database"></i> Kaggle</a>
+        </div>
+      </div>
+      <div class="card" style="border-left:none;padding:2rem;">
+        <div class="card-icon">⚽</div>
+        <h3>Soccer Intelligence Dashboard</h3>
+        <p>25,979 matches. 9 notebooks. 2 ML models. Power BI dashboard. Proved home advantage holds across 30 seasons of Premier League data.</p>
+        <div class="tag-group" style="margin-top:1rem;">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">ML</span>
+        </div>
+        <div style="margin-top:1.2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://github.com/Minga17/soccer-analysis" target="_blank" style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);text-decoration:none;"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://app.powerbi.com/links/wNim_IbQmj?ctid=6f344524-0aa9-4416-89d6-7f1bb85a1364&pbi_source=linkShare" target="_blank" style="font-family:'Syne',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-decoration:none;"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- ── COMMUNITY ── -->
-  <div class="section-wrap fade-in">
-    <div class="section-eyebrow">15 Community and Impact</div>
-    <h2>How I Want to <em>Give Back</em></h2>
-    <p class="large-text">Representation matters. When I was growing up, I didn't always see people who looked like me in the tech and data spaces I wanted to enter.</p>
-    <p class="body-text">That's not something I can change overnight. But I can be one more person who made it through, who stayed consistent, and who shows the next person that it's possible. Impact doesn't always look like a speech or a foundation, sometimes it looks like just being visible. Just succeeding.</p>
-    <p class="body-text">I want to inspire through example. Through showing up, building something real, and making it easier for the people coming after me. That's the kind of impact that compounds quietly, and eventually becomes impossible to ignore.</p>
-    <blockquote>"Progress is personal, but its ripple effects are never just for one person."</blockquote>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="project.html" class="cta-btn primary">View All 11 Projects <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
   </div>
 
   <!-- ── CONTACT ── -->
@@ -578,7 +622,7 @@
   <footer>
     <div>
       <a href="#" class="footer-logo">Minga <span>Ngolo</span></a>
-      <div class="footer-tagline">Aspiring Data Analyst</div>
+      <div class="footer-tagline">DRC · Zimbabwe · USA — Building with Data</div>
       <div class="footer-social">
         <a href="https://x.com/mingangolo17s?s=11" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
         <a href="https://github.com/Minga17" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
