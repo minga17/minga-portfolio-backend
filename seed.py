@@ -174,8 +174,6 @@ PROJECTS = [
         "powerbi_url": None,
         "chart_image": "images/chart2_content_per_year.png",
     },
-        "chart_image": None,
-    },
     {
         "number": 9,
         "title": "Data Analyst Job Market Analysis",
